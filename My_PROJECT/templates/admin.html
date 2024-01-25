@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN</title>
+</head>
+<body>
+    <table border="2">
+        <thead>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Date & Time</th>
+            <th>People</th>
+            <th>Message</th>
+        </thead>
+        {% for user in user_data %}
+        <tbody>
+            <tr>
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.time}}</td>
+                <td>{{user.people}}</td>
+                <td>{{user.message}}</td>
+            </tr>
+        </tbody>
+        {%endfor%}
+    </table>
+</body>
+</html>
